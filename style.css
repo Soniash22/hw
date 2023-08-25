@@ -15,18 +15,18 @@ a {
     color: #fff;
 }
 .menu {
-    list-style-type: none;
-    display: inline-block;
-    background-color: gray;
-    transform: rotate(90deg);
-    padding: 20px 60px 20px 60px;
     position: fixed;
-    top: 183px;
-    left: -199px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    margin-left: 30px;
+    
+    background-color: gray;
+    top: 0;
+    margin: 0;
+    left: 0;
+    padding-top: 40px;
+    height: 100vh;
+    width: 60px;
+    font-size: 20px;
+   
+    
     transition: 0.5s ease-in;
 }
 .item {
@@ -35,29 +35,26 @@ a {
     padding-left: 1.5em;
     position: relative;
     list-style-type: none;
+        white-space: nowrap;
 }
 .submenu {
     list-style-type: none;
     display: none;
-    transform: rotate(270deg);
+    
+    text-transform: uppercase;
+    
 
     
 }
  .menu>li:hover .submenu {
     display: block;
-    transition: 0.5s ease-in;
+    transition: 0.5s ease-in-out;
     
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
 }
 .menu>li:hover .main {
     opacity: 0;
 }
-.menu>li {
-    padding: 20px 60px 20px 60px;
-}
+
 .menu:hover {
     transition: 0.5s ease-in;
 }
@@ -68,5 +65,32 @@ a {
 }
 .main {
     font-size: 27px;
+    position: absolute;
+    left: -25px;
+    top: 100px;
+    transform: rotate(90deg);
+    white-space: nowrap;
+}
+.text {
+    white-space: nowrap;
+    font-size: 30px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 45%;
+    color: white;
+    transition: 0.5s;
+    left: -57px;
+    text-transform: uppercase;
+}
+.menu:hover  {
+    width: 370px;
+
+}
+.menu:hover .text {
+    display: none;
+
+}
+.menu:hover .submenu {
+    display: block;
     
 }
